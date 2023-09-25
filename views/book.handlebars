@@ -1,0 +1,17 @@
+<div class="book_container">
+    <div class="book_card">
+        <h3>{{book.title}}</h2>
+        <p>Autor: {{book.author}}</p>
+        <p>Gênero: {{book.genre}}</p>
+        <p>Idioma: {{book.language}}</p>
+        <p>Nº de páginas: {{book.pageqty}}</p>
+        <p>Nota: {{book.rating}} <i class="fa-solid fa-star" style="color: #fff700;"></i></p>
+    </div>
+    <div class="actions">
+        <a href="/books">Voltar</a>
+        <form action="/books/remove/{{book.id}}" method="post">
+            <input type="submit" value="Remover">
+        </form>
+        <a href="/books/edit/{{book.id}}">Editar</a>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="editbook_container">
+    <h2 class="editbook_title">Edite o seu livro</h2>
+    <form action="/books/updatebook" method="post" class="insert_form">
+        <input type="hidden" name="id" value="{{book.id}}">
+        <div class="form_control">
+            <label for="title">Título:</label>
+            <input type="text" name="title" placeholder="Digite o título" value="{{book.title}}" required>
+        </div>
+        <div class="form_control">
+            <label for="author">Autor:</label>
+            <input type="text" name="author" placeholder="Digite o nome do autor" value="{{book.author}}" required>
+        </div>
+        <div class="form_control">
+            <label for="genre">Gênero:</label>
+            <select name="genre" required>
+                <option value="" disabled selected>Selecione um gênero</option>
+                <option value="ação">ação</option>
+                <option value="drama">drama</option>
+                <option value="suspense">suspense</option>
+                <option value="terror">terror</option>
+                <option value="comédia">comédia</option>
+                <option value="outros">outros</option>
+            </select>
+        </div>
+        <div class="form_control">
+            <label for="language">Idioma:</label>
+            <select name="language" required>
+                <option value="" disabled selected>Selecione um idioma</option>
+                <option value="português">português</option>
+                <option value="inglês">inglês</option>
+                <option value="espanhol">espanhol</option>
+                <option value="alemão">alemão</option>
+                <option value="italiano">italiano</option>
+                <option value="francês">francês</option>
+                <option value="outros">outros</option>
+            </select>
+        </div>
+        <div class="form_control">
+            <label for="pageqty">Nº de páginas:</label>
+            <input type="number" name="pageqty" placeholder="Nº de páginas do livro" value="{{book.pageqty}}" required>
+        </div>
+        <div class="form_control">
+            <label for="rating">Nota:</label>
+            <input class="rating_input" type="radio" name="rating" value="1" required><i class="fa-solid fa-star" style="color: #fff700;"></i>
+            <input class="rating_input" type="radio" name="rating" value="2" required><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i>
+            <input class="rating_input" type="radio" name="rating" value="3" required><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i>
+            <input class="rating_input" type="radio" name="rating" value="4" required><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i>
+            <input class="rating_input" type="radio" name="rating" value="5" required><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i>
+        </div>
+        <input class="btn_submit" type="submit" value="Editar">
+    </form>
+</div>

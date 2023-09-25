@@ -1,0 +1,34 @@
+<div class="books_container">
+    <h2 class="books_title">Livros cadastrados</h2>
+    <div class="table_container">
+        <table class="table">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Gênero</th>
+                    <th scope="col">Idioma</th>
+                    <th scope="col">Nº Páginas</th>
+                    <th scope="col">Nota</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                {{#each books}}
+                    <tr>
+                        <th scope="row">{{this.id}}</th>
+                        <td><a href="/books/{{this.id}}"><span class="span_title">{{this.title}}</span></a></td>
+                        <td>{{this.author}}</td>
+                        <td>{{this.genre}}</td>
+                        <td>{{this.language}}</td>
+                        <td>{{this.pageqty}}</td>
+                        <td>{{this.rating}}<i class="fa-solid fa-star" style="color: #fff700;"></i></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table> 
+    </div>
+</div>
+
+
+
